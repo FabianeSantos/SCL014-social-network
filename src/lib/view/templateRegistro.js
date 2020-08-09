@@ -1,8 +1,8 @@
 // Página para registrarse
+import {loginPage} from './templateLogin.js';
+import {inscription} from '../main.js'
 
-const registrationPage = () => {
-    let btnLogin;
-let saveRegistration;
+export const registrationPage = () => {
     
     document.querySelector('#root').innerHTML = ` 
   <div id='login' class='login'>
@@ -44,14 +44,13 @@ let saveRegistration;
     <script type="module" src="main.js"></script>
   </div>`;
     // Función que lleva desde pagina de registrarse a primera pagina
-    btnLogin = document.querySelector('#loginBtn');
-    btnLogin.addEventListener('click', loginPage);
+    document.querySelector('#loginBtn').addEventListener('click', () => {
+      loginPage();
+      window.location.hash = '#/login';
+    });
 
 
-    saveRegistration = document.querySelector('#save-registration-btn');
-    saveRegistration.addEventListener('click', preinscription);
-
-    function preinscription() {
+  const preinscription = () => {
         const name = document.getElementById('input_name').value;
         const region = document.getElementById('input_address').value;
         const email = document.getElementById('input_email2').value;
@@ -63,7 +62,7 @@ let saveRegistration;
             region,
             email,
             password,
-            passwordConfirm,
+            passwordConfirm
         };
 
         if (user.name === '' || user.region === '' || user.email === '' || user.password === ''
@@ -73,9 +72,9 @@ let saveRegistration;
         if (user.password !== user.passwordConfirm) {
             alert('No coinciden las contraseñas');
         } else {
-            inscription(homePage, user);
+            inscription(user);
         }
     }
+    document.querySelector('#save-registration-btn').addEventListener('click', preinscription);
 };
-btnRegistration.addEventListener('click', registrationPage);
 

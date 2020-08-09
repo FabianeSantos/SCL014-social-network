@@ -1,4 +1,7 @@
 // Página olvidó su contraseña
+import {loginPage} from './templateLogin.js';
+import {pass, loginG}  from '../main.js';
+
 export const errorPage = () => {
     let googlee = document.querySelector('#google');
 let enviar = document.querySelector('#start_btn');
@@ -29,15 +32,10 @@ let enviar = document.querySelector('#start_btn');
 
   `;
     // Función que lleva desde recuperar contraseña a primera pagina
-    btnLogin = document.getElementById('loginBtn');
-    btnLogin.addEventListener('click', loginPage);
-    enviar = document.querySelector('#start_btn');
-    enviar.addEventListener('click', () => {
-        pass(loginPage);
-    });
-    googlee = document.querySelector('#google');
-    googlee.addEventListener('click', () => {
-        loginG(homePage);
-        // eslint-disable-next-line eol-last
-    });
+ document.getElementById('loginBtn').addEventListener('click', () => {
+  loginPage();
+  window.location.hash = '#/login';
+ });
+document.querySelector('#start_btn').addEventListener('click', pass);
+document.querySelector('#google').addEventListener('click', loginG);
 };

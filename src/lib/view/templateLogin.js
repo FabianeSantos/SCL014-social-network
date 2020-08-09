@@ -1,7 +1,8 @@
-// Página de inicio
+import { ingreso, loginG } from "../main.js";
+import { registrationPage } from "./templateRegistro.js";
+import { errorPage } from "./templateError.js";
+
 export const loginPage = () => {
-  let btnHome = document.querySelector("#home_btn");
-  let btnRegistration = document.querySelector("#registration-btn");
   document.querySelector("#root").innerHTML = `
    <header>
         <img class="header-image" src="img/img-cel.png">
@@ -31,22 +32,21 @@ export const loginPage = () => {
  <script type="module" src="main.js"></script>
    `;
   // Función que lleva desde la pagina de inicio a la segunda
-  btnHome = document.querySelector("#home_btn");
-  // eslint-disable-next-line no-use-before-define
-  btnHome.addEventListener("click", () => {
-    ingreso(homePage);
+  document.querySelector("#home_btn").addEventListener("click", () => {
+    ingreso();
   });
   // Función que lleva desde la de inicio a la de registro
-  btnRegistration = document.querySelector("#registration-btn");
-  // eslint-disable-next-line no-use-before-define
-  btnRegistration.addEventListener("click", registrationPage);
+  document.querySelector("#registration-btn").addEventListener("click", () => {
+    registrationPage();
+    window.location.hash = "#/register";
+  });
   // Función que lleva a recuperar tu contraseña
-  mensaje = document.querySelector("#errorMensaje");
-  // eslint-disable-next-line no-use-before-define
-  mensaje.addEventListener("click", errorPage);
+  document.querySelector("#errorMensaje").addEventListener("click", () => {
+    errorPage();
+    window.location.hash = "#/forgot-password";
+  });
   // Función que lleva desde el login google a la segunda pantalla
-  googlee = document.querySelector("#google");
-  googlee.addEventListener("click", () => {
-    loginG(homePage);
+  document.querySelector("#google").addEventListener("click", () => {
+    loginG();
   });
 };

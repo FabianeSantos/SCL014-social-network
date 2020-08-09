@@ -1,8 +1,7 @@
 // Segunda Página
-const homePage = () => {
-  let mensaje = document.querySelector("#errorMensaje");
-  let artSpace;
+import {loginPage} from './templateLogin.js';
 
+export const homePage = () => {
   document.querySelector("#root").innerHTML = ` 
   <div>
   <header>
@@ -24,19 +23,9 @@ const homePage = () => {
 
   </div> `;
   // Función que lleva desde logo segunda pagina a primera página
-  artSpace = document.getElementById("artSpace");
-  artSpace.addEventListener("click", loginPage);
+document.getElementById("artSpace").addEventListener("click", () => {
+  loginPage();
+  window.location.hash = '#/login';
+});
 };
-// Conexion a firebase index.js
-btnHome.addEventListener("click", () => {
-  ingreso(homePage);
-});
 
-googlee.addEventListener("click", () => {
-  loginG(homePage);
-});
-
-/**
- * Listener para recuperacion de contrasena
- */
-mensaje.addEventListener("click", errorPage);
