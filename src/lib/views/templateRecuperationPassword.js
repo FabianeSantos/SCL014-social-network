@@ -3,22 +3,19 @@ import {
     loginGoogle,
 } from '../firebase.js';
 
-import { routeLogin } from './templateLogin.js';
-import { routeHome } from './templateWall.js';
-
 const LoadErrorFunctions = () => {
     // Función que lleva desde recuperar contraseña a primera pagina
-    const btnLogin = document.getElementById('loginBtn');
-    btnLogin.addEventListener('click', routeLogin);
+    const btnLogin = document.querySelector('#loginBtn');
+    btnLogin.addEventListener('click', () => { window.location.hash = '#/inicio-sesion'; });
 
     const enviar = document.querySelector('#start_btn');
     enviar.addEventListener('click', () => {
-        pass(routeLogin);
+        pass();
     });
 
     const googlee = document.querySelector('#google');
     googlee.addEventListener('click', () => {
-        loginGoogle(routeHome);
+        loginGoogle();
     });
 };
 
@@ -31,6 +28,7 @@ export const routeError = () => {
         </header>
     
       <h4> Ingrese su correo para enviar su nueva contraseña </h4>
+      <div id = "error-message" class = "recover-password"></div>
     
       <section class="input_section">
       <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
@@ -46,10 +44,13 @@ export const routeError = () => {
          
         </div>
       </section>
-      <footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
+      <footer>
+      &copy;2020 by Fabiane, Geraldine & Lady
+     <h5>Contactenos: artspacechile@gmail.com</h5>
+     </footer>
     
       `;
     window.location.hash = '#/recuperar-contrasena';
-    document.getElementById('root').innerHTML = viewErrorPage;
+    document.querySelector('#root').innerHTML = viewErrorPage;
     LoadErrorFunctions();
 };

@@ -2,29 +2,26 @@ import {
     loginGoogle,
     ingreso,
 } from '../firebase.js';
-import { routeRegistry } from './templateRegistration.js';
-import { routeError } from './templateRecuperationPassword.js';
-import { routeHome } from './templateWall.js';
 
 const loadLoginFunctions = () => {
     // Función que lleva desde la pagina de inicio a la segunda
     const btnHome = document.querySelector('#home_btn');
     btnHome.addEventListener('click', () => {
-        ingreso(routeHome);
+        ingreso();
     });
 
     // Función que lleva desde la de inicio a la de registro
     const btnRegistration = document.querySelector('#registration-btn');
-    btnRegistration.addEventListener('click', routeRegistry);
+    btnRegistration.addEventListener('click', () => { window.location.hash = '#/registro'; });
 
     // Función que lleva desde el texto olvido su contraseña  a  pantalla recuperar tu contraseña
     const mensaje = document.querySelector('#errorMensaje');
-    mensaje.addEventListener('click', routeError);
+    mensaje.addEventListener('click', () => { window.location.hash = '#/recuperar-contrasena'; });
 
     // Función que lleva desde el login google a la segunda pantalla
     const googlee = document.querySelector('#google');
     googlee.addEventListener('click', () => {
-        loginGoogle(routeHome);
+        loginGoogle();
     });
 };
 
@@ -37,6 +34,7 @@ export const routeLogin = () => {
 </header>
 
 <section class="input_section">
+<div id = "error-message" class = "error-format"></div>
   <form>
       <img class="icono" src="img/correo_icono.png" alt="Logo de correo electrónico">
       <input class="input" type="email" autocomplete="email" placeholder="Correo electrónico" id="input_email"> <br>
@@ -54,11 +52,12 @@ export const routeLogin = () => {
  </div>
 <button class="btn" id="registration-btn">Registrarse</button> 
 </section>
-<footer> &copy;2020 by Fabiane, Geraldine & Lady</footer>
-<script type="module" src="main.js"></script>
+<footer>
+     &copy;2020 by Fabiane, Geraldine & Lady
+    <h5>Contactenos: artspacechile@gmail.com</h5>
+    </footer>
 </div>
  `;
-
     window.location.hash = '#/inicio-sesion';
     document.getElementById('root').innerHTML = viewLogin;
     loadLoginFunctions();
