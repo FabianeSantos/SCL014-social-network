@@ -1,11 +1,8 @@
-
 import {
     createPost,
     containerPost,
-    uploadFile
+    profile2,
 } from '../firebase.js';
-
-
 
 
 const loadHomeFunctions = () => {
@@ -20,9 +17,11 @@ export const routeHome = () => {
    <header>
     <script src="js/imagenes.js"></script>
         <img class="header-image" src="img/img-cel.png" alt="">
+        <img class="header-image-desktop2" src="img/geri1.jpg" alt="">
         <div class = "container-second-page">
+        
           <div class = "container_left">
-            <img class="header-image-desktop" src="img/img-desk.png" alt="">
+          
             <h1 class = "logo-second-page" id="artSpace" >Art Space</h1>
             <input  type="search" id="input_search"  placeholder="Buscar en Art Space" >
             <div class = "lupa">
@@ -39,6 +38,8 @@ export const routeHome = () => {
     </header>
     <main>
     <div id="ingreso-post">
+    <main id ="contenedor-perfil2" class = "contenedor-perfil2" ></main>
+    <button class="btnProfile2" id= "closeProfile">Cerrar Sesión</button>
      <form class="formulario-post">
     
     
@@ -48,7 +49,6 @@ export const routeHome = () => {
            placeholder="¡Realiza una publicación!"></textarea>
         
        </div>
-
        
        <div class="container">
        <div class="row">
@@ -59,7 +59,7 @@ export const routeHome = () => {
            <label class="btn-file"> 
            <div class="prueba">
               <input type="file" name="fichero" value="" id="fichero" class="hidden">
-              <img src="img/img1.png"  class="img-responsive" alt="descargar">
+              <img src="img/img1.png" id="output" class="img-responsive" alt="descargar">
               </div>
            </label>
          </form>
@@ -84,6 +84,7 @@ export const routeHome = () => {
     window.location.hash = '#/muro';
     document.getElementById('root').innerHTML = viewHomePage;
     loadHomeFunctions();
+    profile2();
     document.getElementById('icoArt').addEventListener('click', () => { window.location.hash = '#/conozca'; });
     document.getElementById('profile').addEventListener('click', () => {
         window.location.hash = '#/perfil';
@@ -91,21 +92,23 @@ export const routeHome = () => {
 
     containerPost();
 
+    const valueFichero = document.querySelector('#fichero');
     const btnPublicar = document.querySelector('#publicar');
     btnPublicar.addEventListener('click', () => {
-        const post = document.querySelector('#post').value;
+        const archivoImg = valueFichero.files[0];
+        valueFichero.value = null;
+        const textPost = document.querySelector('#post').value;
+        const post = {
+            text: textPost,
+            image: archivoImg,
+        };
         createPost(post);
-      
-      
-      
     });
-    const valueFichero = document.getElementById('fichero');
-    valueFichero.addEventListener('change', () =>{
-     console.log("archivo cargado");
-     var archivoImg= valueFichero.files[0];
-     uploadFile(archivoImg);
-     
-     });
+
+    valueFichero.addEventListener('change', () => {
+        const output = document.getElementById('output');
+        output.src = URL.createObjectURL(valueFichero.files[0]);
+    });
 };
 
- 
+
