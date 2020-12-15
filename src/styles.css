@@ -1,95 +1,73 @@
 /* Estilos generales para versión desktop*/
 body {
   margin: 0;
-  text-align: center;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
   background-color: #f2f5821a;
 }
 
-.input_section {
+#root {
   display: flex;
-  flex-direction: column;
-  margin-left: 20em;
-  margin-top: -1em;
 }
 
-.input_section2 {
+.login-container{
+  display: flex;
+  width: 100%;
+}
+
+main {
+  display: flex;
+}
+
+header {
+  flex: 0 0 30%;
+  height: 100vh;
+  line-height: 0;
+}
+
+.header-wall {
+  height: 22vh;
   display: flex;
   flex-direction: column;
 }
 
-.loginSecons {
+.login {
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-p {
-  font-family: "Open Sans", sans-serif;
-  cursor: default;
-
-}
-
-.cont_logo {
-  display: inline-block;
-  margin-left: 19em;
-}
-
-.par2 {
-  font-family: "Open Sans", sans-serif;
-  cursor: default;
-  margin-left: 21em;
-}
-
-h4 {
-  font-family: "Open Sans", sans-serif;
-  color: #191818db;
-  margin-left: 24em;
-}
-
-/* Estilos para header*/
-.header-image {
-  display: none;
-}
-
-.header-image-desktop {
-  filter: opacity(0.7);
-  height: 100%;
-  left: -55px;
-  top: 0px;
-  visibility: visible;
-  min-height: 100%;
-  position: fixed;
-}
-
-.header-image-desktop2 {
-  filter: opacity(0.7);
-  height: 8em;
-  left: -55px;
-  top: 0px;
-  width: 100%;
-}
-
-.icons-General {
-  float: right;
+.input_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*Estilos logo Art Space*/
 h1 {
-  font-size: 4vw;
+  font-size: 3.5rem;
   font-family: "Dancing Script", cursive;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  margin-left: 7em;
 }
 
-.artSecond {
-  font-size: 4vw;
-  font-family: "Dancing Script", cursive;
-  margin-top: 10px;
+/*Estilos para mensajes de alerta*/
+.error-format {
+  color: salmon;
+}
+
+.input_section>form {
   display: flex;
   flex-direction: column;
-  margin-left: 6em;
+}
+
+.input_section>form>:nth-child(1){
+  margin-top: 0;
+}
+
+.input_section>form>div {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
 }
 
 /*Estilos para inputs*/
@@ -97,16 +75,22 @@ h1 {
   border: none;
   border-bottom: solid 1px;
   font-family: "Open Sans", sans-serif;
-  padding-top: 3em;
   width: 22vw;
   outline: none;
   background: transparent !important;
+
+  margin-left: 10px;
+
   cursor: pointer;
+
 }
 
 input:-webkit-autofill {
   transition: background-color 5000s ease-in-out 0s;
 }
+
+
+.errorMensaje {
 
 .input2 {
   border: none;
@@ -137,199 +121,144 @@ input:-webkit-autofill {
   padding-right: 1em;
   padding-left: 35px;
   font-family: "Open Sans", sans-serif;
+
   text-align: center;
-  border: none;
-  outline: none;
   cursor: pointer;
-}
-
-input#input_email.imput {
-  background: transparent;
-}
-
-/*Estilos para botones*/
-.btn {
-  margin: 0em;
-  margin-top: 2em;
-  background: #ff9a02ad;
-  border-radius: 17px;
-  border: 2px #f7e22d;
-  font-family: "Open Sans", sans-serif;
-  width: 13vw;
-  font-size: 3vh;
-  height: 6vh;
-  outline: none;
-  cursor: pointer;
-  margin-left: 5em;
-
-}
-
-.btn:hover {
-  filter: opacity(0.5);
-}
-
-.btnx {
-  margin: 0em;
-  margin-top: 2em;
-  background: #ff9a02ad;
-  border-radius: 17px;
-  border: 2px #f7e22d;
-  font-family: "Open Sans", sans-serif;
-  width: 13vw;
-  font-size: 3vh;
-  height: 6vh;
-  outline: none;
-  cursor: pointer;
-  margin-left: 22em;
-}
-
-.btnx:hover {
-  filter: opacity(0.5);
-}
-
-.btnResgitro {
-  margin: 0em;
-  margin-top: 2em;
-  background: #ff9a02ad;
-  border-radius: 17px;
-  border: 2px #f7e22d;
-  font-family: "Open Sans", sans-serif;
-  width: 13vw;
-  font-size: 3vh;
-  height: 6vh;
-  outline: none;
-  cursor: pointer;
-  margin-left: 308px;
-}
-
-.btnResgitro:hover {
-  filter: opacity(0.5);
-}
-
-.btnComenzar {
-  margin: 0em;
-  margin-top: 1em;
-  background: #ff9a02ad;
-  border-radius: 17px;
-  border: 2px #f7e22d;
-  font-family: "Open Sans", sans-serif;
-  width: 13vw;
-  font-size: 3vh;
-  height: 6vh;
-  outline: none;
-  cursor: pointer;
-  cursor: pointer;
-}
-
-.btnComenzar:hover {
-  filter: opacity(0.5);
-}
-
-.btnR {
-  margin: 0em;
-  margin-top: 2em;
-  background: #ff9a02ad;
-  border-radius: 17px;
-  border: 2px #f7e22d;
-  font-family: "Open Sans", sans-serif;
-  width: 13vw;
-  font-size: 3vh;
-  height: 6vh;
-  outline: none;
-  cursor: pointer;
-  margin-left: 44em;
-
-}
-
-.btnR:hover {
-  filter: opacity(0.5);
-}
-
-.logo {
-  width: 3em;
-  cursor: pointer;
-}
-
-.logo:hover {
-  filter: opacity(0.5);
-}
-
-.logo2 {
-  width: 3em;
-  margin-left: 21em;
-  cursor: pointer;
-}
-
-.logo2:hover {
-  filter: opacity(0.5);
-}
-
-.img-events {
-  width: -webkit-fill-available;
-  height: 120px;
-}
-
-.container-second-page {
-  background-color: #f4f683;
-  margin-top: -4px;
-  padding: 7px;
-  height: 2em;
-}
-
-footer {
-  font-size: 20px;
-  margin-top: 4vh;
-  font-family: "Dancing Script", cursive;
-  display: flex;
-  flex-direction: column;
-  margin-left: 16em;
-}
-
-.f2 {
-  font-size: 20px;
-  margin-top: 10vh;
-  font-family: "Dancing Script", cursive;
-  display: flex;
-  flex-direction: column;
-  margin-left: 18em;
-}
-
-.icono {
-  width: 1.3em;
-}
-
-.icono2 {
-  width: 1.3em;
-  margin-left: 49%;
-  margin-top: 2em;
-
+  margin-top: 10px;
+  font-size: 0.8rem;
 }
 
 .errorMensaje:hover {
   color: salmon;
 }
 
+button {
+  margin-top: 1em;
+  background: #ff9a02ad;
+  border-radius: 17px;
+  border: 2px #f7e22d;
+  font-family: "Open Sans", sans-serif;
+  font-size: 3vh;
+  height: 6vh;
+  width: 10rem;
+  outline: none;
+  cursor: pointer;
+  align-self: center;
+}
+
+button:hover {
+  filter: opacity(0.5);
+}
+
+.input_section2 {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.loginSecons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+.btnResgitro:hover {
+  filter: opacity(0.5);
+
+}
+
+.input_section2>div {
+  display: flex;
+  align-items: center;
+  margin-top: 30px 0 10px 0;
+}
+
 h4 {
-  font-family: "Open Sans", sans-serif;
-  color: #191818db;
+  margin-bottom: 55px;
 }
 
-.hsecond {
-  font-family: "Open Sans", sans-serif;
-  color: #191818db;
-  margin-left: 20em;
+.input_section_registry {
+  margin-bottom: 2em;
 }
 
+/* Estilos para header*/
+.header-image {
+  display: none;
+}
+
+.header-image-desktop {
+  filter: opacity(0.7);
+  height: 100%;
+  position: fixed;
+}
+
+.header-image-desktop2 {
+  filter: opacity(0.7);
+  width: 100%;
+}
+
+.icons-General {
+  float: right;
+}
+
+/*Estilos para sección de perfil*/
+
+.contenedor-perfil2 {
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 15px 15px 15px;
+  height: 58vh;
+  padding: 10px;
+  border: solid 1px #edefb0;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.contenedor-perfil2>div {
+  text-align: center;
+}
+
+.imgProfile2 {
+  width: 10rem;
+  border-radius: 50%;
+  border: 3px solid rgb(255 154 2 / 57%);
+}
+
+.nameProfile2 {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.emailProfile2 {
+  text-align: center;
+  font-size: 17px;
+}
+
+/*Estilos para página de muro*/
+
+/* header muro */
+
+.container-second-page {
+  display: flex;
+  background-color: #f4f683;
+  padding: 7px;
+}
+
+.icons-General {
+  flex: 0 0 70%;
+  text-align: end;
+}
+
+.container_left {
+  flex: 0 0 30%;
+  cursor: pointer;
+}
+
+.icoUsu,
+.icoCalen,
 .icoArt {
   padding-inline-end: 1em;
-}
-
-.icoCalen {
-  padding-inline-end: 1em;
-}
-
-.icoUsu {
-  padding-inline-end: 2em;
 }
 
 .icoUsu:hover,
@@ -338,8 +267,10 @@ h4 {
   filter: opacity(0.5);
 }
 
-.icons-General {
-  float: right;
+.wall-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .logo-second-page {
@@ -353,60 +284,41 @@ h4 {
 filter: opacity(0.5);
 }
 
-#input_search {
-  background: rgba(255, 154, 2, 0.81);
-  border-radius: 17px;
-  height: 28px;
-  width: 16em;
-  margin-left: 2em;
-  padding-block-end: 6px;
-  padding-block-start: 7px;
-  padding-right: 1em;
-  padding-left: 35px;
-  font-family: "Open Sans", sans-serif;
-  text-align: center;
-  border: none;
-  outline: none;
-  color: #ff0000;
-  cursor: pointer;
+#ingreso-post {
+  flex: 0 0 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#input_search:hover {
-  filter: opacity(0.5);
-}
-
-input#input_email.imput {
-  background: transparent;
-}
-
-.container_left {
-  float: left;
-}
+/*Estilos para seccion de realizar publicación*/
 
 .formulario-post {
-  margin-left: 23em;
-  margin-top: -16em;
+  display: flex;
+  flex-direction: column;
   border: solid 1px #edefb0;
   background-color: white;
-  height: 14em;
   border-radius: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 65em;
-}
-
-.error2 {
-  font-family: "Open Sans", sans-serif;
-  ;
-  color: salmon;
-  margin-left: -17em;
-  font-size: 17px;
-  cursor: point;
-
+  margin: 30px 0 15px 15px;
+  width: 63vw;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 .textarea {
+
+  background: #fdfdf2 !important;
+  border-radius: 2em;
+  font-size: 15px;
+  text-align: center;
+  border-color: #00000029;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  cursor: pointer;
+  width: 80%;
+  height: 21vh;
+  margin-top: 25px;
+
   font-family: "Open Sans", sans-serif;
     padding-top: 1em;
     outline: none;
@@ -431,58 +343,24 @@ input#input_email.imput {
 .textarea2 {
   font-family: "Open Sans", sans-serif;
 
+
   outline: none;
-  background: #fdfdf2 !important;
-  border-radius: 2em;
-  font-size: 15px;
-  text-align: center;
-  border-color: #00000029;
-  width: 100%;
-  height: 4em;
-  font-family: "Open Sans", sans-serif;
+}
+
+.formulario-post>div {
   text-align: center;
 }
 
-.hr {
-  border: 0 none #eeeaea;
-  border-top: 1px solid #e4e1e1;
-  height: 1px;
-  display: flex;
-  margin-top: -53px;
-  margin-left: 38em;
-  width: 40em;
-}
-
-.hr2 {
-  border: 0 none #eeeaea;
-  border-top: 1px solid #e4e1e1;
-  height: 1px;
-  margin: 5px 0;
-  display: block;
-  clear: both;
-  margin-left: 3em;
-  margin-right: 3em;
-  margin-top: 2em;
-}
-
-.post-actual {
-  margin-top: 2em;
-  margin-right: 2em;
-  margin-left: 23em;
-  border-radius: 9px;
-  padding-block-start: 13px;
-  border: solid 1px #edefb0;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  height: min-content;
-  width: -webkit-fill-available;
+.hidden {
+  display: none;
 }
 
 .img-responsive {
   width: 5em;
+
   margin-left: -59em;
   margin-top: 5em;
+
   cursor: pointer;
 
 }
@@ -490,6 +368,12 @@ input#input_email.imput {
 .img-responsive:hover {
   filter: opacity(0.5);
 }
+
+.hr {
+  border: 0 none #eeeaea;
+  border-top: 1px solid #e4e1e1;
+  height: 1px;
+  width: 66%;
 
 .botones-post {
   margin-top: 4px;
@@ -547,79 +431,68 @@ input#input_email.imput {
 
 .btnProfile2:hover {
   filter: opacity(0.5);
+
 }
 
+/* Estilos para post ya realizados*/
 
-.imagen-post {
-  margin-top: -3em;
+#ingreso-post>div {
+  display: flex;
+  flex-direction: column;
 }
 
-#ingreso-post {
-  margin-top: -1em;
-  margin-block-end: 2em;
+.post-actual {
+  border-radius: 9px;
+  border: solid 1px #edefb0;
+  margin: 15px 0 15px 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 63vw;
 }
 
-.prueba {
-  margin: 2em;
+.user-post-data {
+  display: flex;
 }
 
 .icoperfil2 {
-  width: 4em;
+  width: 5rem;
   border: solid 1px #0808087d;
-  border-radius: 5em;
-  margin-right: 30em;
-  margin-top: 1em;
-  margin-left: 2em;
-}
-
-.icoLoadimg {
-  width: 3em;
-}
-
-.icoReac {
-  width: 25px;
-  margin-right: 9px;
-}
-
-.icoReac2 {
-  width: 25px;
-  margin-right: 9px;
-}
-
-.icoReacall {
-  margin-right: 32em;
+  border-radius: 20em;
+  margin: 10px 18px 0 20px;
 }
 
 .name1 {
-  font-family: "Open Sans", sans-serif;
   cursor: default;
-  text-align: initial;
-  margin-left: 10vw;
-  margin-top: -55px;
   font-size: 16px;
-  color: #080808;
+  margin: 29px 0 0 0;
 }
 
 .post2 {
-  font-family: "Open Sans", sans-serif;
   cursor: default;
-  margin-top: -52px;
   text-align: initial;
-  margin-left: 10vw;
-  margin-right: 2em;
   font-size: 13px;
   color: #747373;
+  margin-top: 6px;
 }
 
 .post3 {
-  font-family: "Open Sans", sans-serif;
   cursor: default;
-  margin-top: -2em;
-  text-align: initial;
-  margin-left: 3.5vw;
-  margin-right: 3vw;
   font-size: 14px;
+  margin-left: 31px;
 }
+
+
+.hr2 {
+  border: 0 none #eeeaea;
+  border-top: 1px solid #e4e1e1;
+  height: 1px;
+  width: 54vw;
+}
+
+.icoReacall {
+  display: flex;
+  margin-left: 61px;
 
 p.likes {
   font-family: "Open Sans", sans-serif;
@@ -638,95 +511,153 @@ p.likes {
   height: 12em;
   border-radius: 10px;
   width: 15em;
-}
-
-
-.imgProfile2 {
-  width: 7em;
-  border-radius: 50%;
-  border: 1px solid yellow;
-  background-color: #edefb0;
-  outline: none;
-  border: 3px solid rgb(255 154 2 / 57%);
-  margin-top: -6em;
-}
-
-
-.nameProfile2 {
-  font-size: 20px;
-  font-family: "Open Sans", sans-serif;
-  text-align: center;
-  margin-left: 0em;
 
 }
 
-.emailProfile2 {
-  font-size: 16px;
-  font-family: "Open Sans", sans-serif;
-  display: contents;
-
-}
-
-/* Estilos para sección de perfil*/
-#contenedor-perfil {
-  margin-right: 15em;
-  margin-left: 31em;
-  margin-top: 7em;
-  border: solid 1px #edefb0;
-  background-color: white;
-  height: 18em;
-  border-radius: 10px;
-  width: 28em;
+/* Estilos para sección de hacer comentarios*/
+#make_comments {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  margin: 0px 4em;
 }
 
-.imgProfile {
-  width: 10em;
-  border-radius: 50%;
+.textarea2 {
+  outline: none;
+  background: #fdfdf2 !important;
+  border-radius: 2em;
+  font-size: 15px;
+  text-align: center;
+  border-color: #00000029;
+  width: 100%;
+  height: 4em;
+  text-align: center;
+}
+
+.close-btn {
+  background-color: transparent;
   border: none;
-  background-color: #edefb0;
-  outline: none;
-  border: 3px solid rgb(255 154 2 / 57%);
-  margin-top: -7em;
+  align-self: flex-end;
+  width: 3vw;
+  margin: 0 5px 5px 0;
 }
 
-.imgProfile:focus {
-  outline: none;
+.close-btn img {
+  width: 2em;
 }
 
-.imgProfileimg {
-  margin-top: -7em;
-  font-family: "Open Sans", sans-serif;
+/* Estilos para comentarios realizados*/
+
+#comments {
+  display: flex;
+  flex-direction: column;
 }
 
-.nameProfile {
+.comments {
+  border-radius: 10px;
+  border: solid 1px #edefb0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  width: 50vw;
+  background: #fdfdf2;
+  margin: 1% 2%;
+  padding: 5px 21px;
+}
+
+.imgPost {
+  align-self: center;
+  display: flex;
+  height: 20em;
+  object-fit: scale-down;
+  width: -webkit-fill-available;
+}
+
+input#input_email.imput {
+  background: transparent;
+}
+
+.logo {
+  width: 3em;
+  cursor: pointer;
+}
+
+.logo:hover {
+  filter: opacity(0.5);
+}
+
+.img-events {
+  width: -webkit-fill-available;
+  height: 120px;
+}
+
+footer {
   font-size: 20px;
+  font-family: "Dancing Script", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 6rem;
+  margin-top: auto;
+}
+
+.icono {
+  width: 1.5rem;
+}
+
+#input_search {
+  background: rgba(255, 154, 2, 0.81);
+  border-radius: 17px;
+  height: 28px;
+  width: 16em;
+  margin-left: 2em;
+  padding-block-end: 6px;
+  padding-block-start: 7px;
+  padding-right: 1em;
+  padding-left: 35px;
   font-family: "Open Sans", sans-serif;
   text-align: center;
-  margin-left: 0em;
-
-}
-
-.emailProfile {
-  font-size: 20px;
-  font-family: "Open Sans", sans-serif;
-}
-
-#fichero {
-  margin: 0em;
-  margin-top: 1em;
-  background: #ff9a02ad;
-  border-radius: 17px;
-  border: 2px #f7e22d;
-  font-family: "Open Sans", sans-serif;
-  width: 32vw;
-  font-size: 15px;
-  height: 4vh;
+  border: none;
   outline: none;
-  margin-block-end: 5em;
+  color: #ff0000;
   cursor: pointer;
+}
+
+#input_search:hover {
+  filter: opacity(0.5);
+}
+
+input#input_email.imput {
+  background: transparent;
+}
+
+.imagen-post {
+  margin-top: -3em;
+}
+
+.prueba {
+  margin: 2em;
+}
+
+.icoLoadimg {
+  width: 3em;
+}
+
+.icoReac {
+  width: 25px;
+  margin-right: 9px;
+}
+
+.icoReac2 {
+  width: 25px;
+  margin-right: 9px;
+}
+
+.likes {
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  margin-top: 0em;
 }
 
 .btn-file {
@@ -742,18 +673,6 @@ p.likes {
   outline: none;
   margin-block-end: 0em;
   cursor: pointer;
-}
-
-.hidden {
-  visibility: hidden;
-}
-
-/*Estilos para mensajes de alerta*/
-.error-format {
-  font-family: "Open Sans", sans-serif;
-  cursor: default;
-  margin-left: 20em;
-  color: salmon;
 }
 
 .recover-password {
@@ -783,6 +702,16 @@ h5 {
   margin-top: 15px;
 }
 
+.emailProfile2{
+  margin: 3% 0;
+  font-size: 16px;
+}
+
+.formulario-post {
+  margin: 30px auto 0 auto;
+  width: 90%; 
+}
+
 .containerEvent {
   width: 25%;
   height: 16em;
@@ -794,15 +723,18 @@ h5 {
   flex-direction: column;
 }
 
+#ingreso-post>div{
+  width: 90%;
+  margin: auto;
+}
+
 .subtitulos {
   font-family: "Open Sans", sans-serif;
   text-align: initial;
-  margin-left: 16px;
+  margin: 0px 0px 37px 14px;
   color: #747373c2;
-  margin-top: -9px;
   font-size: 10px;
 }
-
 
 .btnArt {
   background: #ff9a02ad;
@@ -835,6 +767,10 @@ h5 {
   cursor: pointer;
 }
 
+.icoReacall {
+  margin-left: 10%
+}
+
 .btnArt3 {
   background: #ff9a02ad;
   border-radius: 17px;
@@ -865,6 +801,10 @@ h5 {
   cursor: pointer;
 }
 
+.events-container{
+width: 100%;
+}
+
 .article {
   display: flex;
   flex-direction: row;
@@ -874,61 +814,17 @@ h5 {
   flex-wrap: wrap;
 }
 
-#make_comments {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0px 4em;
-}
-
-.comments {
-  margin-right: 10em;
-  margin-left: 12em;
-  padding-block-end: 13px;
-  border-radius: 10px;
-  border: solid 1px #edefb0;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  font-size: 11px;
-  margin-block-end: 1em;
-  font-family: "Open Sans", sans-serif;
-  text-align: left;
-  padding-inline-start: 1em;
-  padding-inline-end: 1em;
-  width: fit-content;
-  justify-content: center;
-  margin-left: 3em;
-  margin-right: 2em;
-  background: #fdfdf2;
-}
-
-.close-btn {
-  background-color: transparent;
-  border: none;
-  align-self: flex-end;
-}
-
-.close-btn img {
-  width: 2em;
-}
-
-.imgPost {
-  align-self: center;
-  display: flex;
-  height: 20em;
-  object-fit: scale-down;
-  width: -webkit-fill-available;
-}
-
-#lista-publicaciones {
-  width: 100%;
-  height: 100%;
-}
-
-@media (max-width: 801px) {
+@media (max-width: 768px) {
   body {
     margin-left: 0;
+  }
+
+  main{
+    flex-direction: column;
+  }
+
+  .login-container{
+    flex-direction: column;
   }
 
   .header-image {
@@ -940,7 +836,10 @@ h5 {
   h1 {
     font-size: 10vw;
     background: #f4f683;
-    margin-top: -4px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 11%;
+    margin-top: 0;
     font-family: "Dancing Script", cursive;
   }
   h1:hover{
@@ -965,38 +864,28 @@ h5 {
     filter: opacity(0.5);
   }
 
+  .nameProfile2 {
+    margin: 0;
+    font-size: 18px;
+  }
+
   .icono {
     width: 1.3em;
     cursor: pointer;
-    margin-left: -21em;
   }
 
-  .icono2 {
-    width: 1.9em;
-    margin-left: 9em;
-    margin-top: 2em;
+  .comments{
+    width: auto;
+    box-sizing: border-box;
   }
 
-
-  .icoArt {
-    padding-inline-end: 0.5em;
-    cursor: pointer;
+  .post-actual{
+    margin: 15px 0;
+    width: 100%;
   }
 
-  .icoCalen {
-    padding-inline-end: 0.5em;
-    cursor: pointer;
-  }
-
-  .icoUsu {
-    padding-inline-end: 0;
-    cursor: pointer;
-  }
-
-  .icoUsu:hover,
-  .icoCalen:hover,
-  .icoArt:hover {
-    filter: opacity(0.5);
+  .input_section{
+    width: 100%;
   }
 
   .input {
@@ -1005,6 +894,7 @@ h5 {
     padding-top: 2.5em;
     border-bottom: solid 1px;
     font-family: "Open Sans", sans-serif;
+
     font-size: x-large;
     cursor: pointer;
 
@@ -1014,35 +904,22 @@ h5 {
     margin-top: 3em;
   }
 
+  .logo-second-page {
+    margin: 9% 0 0 0;
+  }  
+
   .logo {
-    width: 4em;
+    width: 3em;
     margin: 0 1em;
-    margin-left: -19em;
   }
 
   p {
     font-family: "Open Sans", sans-serif;
-    margin-left: -13em;
-    font-size: 25px;
+    font-size: 19px;
   }
 
   p:hover {
     filter: red;
-  }
-
-
-  footer {
-    margin-top: 3em;
-    font-family: "Dancing Script"cursive;
-    margin-left: 1em;
-    font-size: 23px;
-  }
-
-  .container-second-page {
-    background-color: #f4f683;
-    margin-top: -4px;
-    padding: 7px;
-    height: 3em;
   }
 
   .icons-General {
@@ -1051,13 +928,6 @@ h5 {
     margin-inline-end: 3em;
 }
   }
-
-  .logo-second-page {
-    display: inline-block;
-    font-size: 50px;
-
-  }
-
 
   #input_search {
     background: rgba(255, 154, 2, 0.81);
@@ -1068,9 +938,8 @@ h5 {
     margin-left: 7px;
     cursor: pointer;
   }
-
-  .container_left {
-    float: left;
+  .imgProfile2 {
+    width: 7rem;
   }
 
   .errorMensaje:hover {
@@ -1155,55 +1024,13 @@ h5 {
     display: flex;
   }
 
+
   .icoperfil {
     width: 4em;
     margin-left: 154px;
     margin-top: -2em;
     display: flex;
   }
-
-
-  .post2 {
-    font-size: 14px;
-    margin-top: -46px;
-    margin-left: 106px;
-    display: flex;
-  }
-
-  .post3 {
-    font-family: "Open Sans", sans-serif;
-    cursor: default;
-    margin-top: -27px;
-    text-align: initial;
-    margin-left: 3.5vw;
-    margin-right: 3vw;
-    font-size: 23px;
-  }
-
-
-  .name1 {
-    font-size: 22px;
-    margin-top: -70px;
-    margin-left: 108px;
-  }
-
-  .icoReacall {
-    display: flex;
-    margin-left: 43px;
-  }
-
-  .hr2 {
-    border: 0 none #eeeaea;
-    border-top: 1px solid #e4e1e1;
-    height: 1px;
-    margin: 5px 0;
-    display: block;
-    clear: both;
-    margin-left: 3em;
-    margin-right: 3em;
-    margin-top: 23px;
-  }
-
 
   .nameProfile {
     font-size: 20px;
@@ -1220,17 +1047,15 @@ h5 {
   .subtitulos {
     background: none;
     font-family: "Open Sans", sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     text-align: initial;
-    margin-left: 8px;
-    margin-top: -17px;
 
   }
 
 
   .containerEvent {
     width: 42%;
-    height: 16em;
+    height: 20em;
     display: flex;
     border: solid 1px #f2f3b2;
     margin-top: 2em;
@@ -1242,7 +1067,7 @@ h5 {
   .titulos {
     background: none;
     font-family: "Open Sans", sans-serif;
-    font-size: 19px;
+    font-size: 16px;
     text-align: initial;
     margin-left: 8px;
     margin-top: 2px;
@@ -1260,11 +1085,11 @@ h5 {
     font-family: "Open Sans", sans-serif;
     width: 27vw;
     font-size: 17px;
-    height: 3vh;
+    height: auto;
     display: inline-block;
     margin-top: 0em;
     cursor: pointer;
-    ;
+    margin-left: 7%;
   }
 
   .botArt:hover {
@@ -1342,6 +1167,7 @@ h5 {
   }
 
   .btnComenzar {
+
     margin: 0em;
     margin-top: 1em;
     background: #ff9a02ad;
@@ -1419,85 +1245,34 @@ h5 {
     margin: 0em;
     margin-top: 2em;
     background: #ff9a02ad;
+
     border-radius: 17px;
     border: 2px #f7e22d;
     font-family: "Open Sans", sans-serif;
-    width: 8em;
+    width: 10rem;
     font-size: 3vh;
-    height: 5vh;
     outline: none;
     cursor: pointer;
-    margin-left: 11em;
-    font-size: 26px;
   }
 
-  .btnR:hover {
+  .btnComenzar:hover {
     filter: opacity(0.5);
-  }
-
-  .f2 {
-    font-size: 20px;
-    margin-top: 2vh;
-    font-family: "Dancing Script", cursive;
-    display: flex;
-    flex-direction: column;
-    margin-left: 0em;
-    font-size: 23px;
   }
 
   .error-format {
     font-family: "Open Sans", sans-serif;
-    ;
     color: salmon;
-    margin-left: 13em;
     font-size: 25px;
   }
 
   .error2 {
     font-family: "Open Sans", sans-serif;
-    ;
     color: salmon;
-    margin-left: -26em;
-    font-size: 25px;
+    font-size: 16px;
   }
 
   .header-image-desktop2 {
     display: none;
-  }
-
-  .imgProfile2 {
-    width: 6em;
-    border-radius: 50%;
-    background-color: #edefb0;
-    outline: none;
-    border: 3px solid rgb(255 154 2 / 57%);
-    margin-top: -4em;
-    margin-left: 12em;
-  }
-
-  .nameProfile2 {
-    margin-top: -1em;
-    font-size: 20px;
-    font-family: "Open Sans", sans-serif;
-    margin-left: -1em;
-    background: none;
-  }
-
-  .contenedor-perfil2 {
-    margin-top: 3em;
-    width: 25em;
-    height: 17em;
-    margin-left: 11em;
-    background-color: #fdfdf2;
-    border: none;
-    ;
-  }
-
-  .emailProfile2 {
-    font-size: 17px;
-    font-family: "Open Sans", sans-serif;
-    padding-inline-start: -44em;
-    margin-left: 4em;
   }
 
   .imgPost {
@@ -1505,6 +1280,9 @@ h5 {
     display: flex;
     height: 23em;
     width: -webkit-fill-available;
+
+    padding: 0px 3%;
+
   }
 
   .btnProfile2 {
@@ -1545,11 +1323,12 @@ h5 {
     margin-right: 2em;
     background: #fdfdf2;
     margin-top: 1em;
+
   }
 
   .likes {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
     margin-top: 0em;
-    margin-left: -1em;
+  }
   }
