@@ -1,22 +1,25 @@
 export const routeEvents = () => {
-    const viewEventsPage = ` 
-    <div>
-    <header>
-        <img class="header-image" src="img/img-cel.png" alt="">
-        <img class="header-image-desktop2" src="img/geri1.jpg" alt="">
-        <div class = "container-second-page">
-          <div class = "container_left">
-            <h1 class = "logo-second-page" id="artSpace2" >Art Space</h1>
-          </div>
-          </div>
-          <div class = "icons-General">
-            <img class = "icoArt" src="img/articulo_icono.png" alt="">
-            <a href="https://calendar.google.com/calendar/b/4/r?tab=mc" target="_blank"><img
-            src="img/calendario_icono.png" class = "icoCalen"></a>
-            <img class = "icoUsu" src="img/usuario_icono.png" alt="" id="profile">
-          </div> 
-       
-    </header>
+
+  const viewEventsPage = ` 
+    <div class= "events-container">
+    <header class = "header-wall">
+    <script src="js/imagenes.js"></script>
+    <img class="header-image" src="img/img-cel.png" alt="">
+    <img class="header-image-desktop2" src="img/geri1.jpg" alt="">
+    <div class="container-second-page">
+
+        <div class="container_left">
+            <h1 class="logo-second-page" id="artSpace">Art Space</h1>
+        </div>
+        <div class="icons-General">
+            <img class="icoArt" id="icoArt" src="img/articulo_icono.png" alt="">
+            <a href="https://calendar.google.com/calendar/b/4/r?tab=mc" target="_blank">
+                <img src="img/calendario_icono.png" class="icoCalen"></a>
+            <img class="icoUsu" src="img/usuario_icono.png" alt="" id='profile'>
+        </div>
+    </div>
+</header>
+
     <div class= 'article'>
     <section class= 'containerEvent'>
     
@@ -92,17 +95,16 @@ export const routeEvents = () => {
 </section>
 
 <section class= 'containerEvent'>
-    
+
     <img src="./img/start.jpg" class="img-events" alt="pomaire"></a> 
     
     <h1 class='titulos'>Especial origami personajes Star Wars! - Time Corona</h1>
     <h4 class='subtitulos'> Manualidades</h4>
+ 
     
     <a href="https://timecorona.com/manualidades-diy/especial-origami-personajes-star-wars/" target="_blank">
   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
-
-
 </section>
 <section class= 'containerEvent'>
 
@@ -149,14 +151,12 @@ export const routeEvents = () => {
      &copy;2020 by Fabiane, Geraldine & Lady
     </footer>
 `;
-    window.location.hash = '#/conozca';
-    document.getElementById('root').innerHTML = viewEventsPage;
-    document.getElementById('artSpace2').addEventListener('click', () => {
-        window.location.hash = '#/muro';
-    })
-    document.getElementById('profile').addEventListener('click', () => {
-        window.location.hash = '#/perfil';
-    });
-       
-   
+  window.location.hash = "#/conozca";
+  document.getElementById("root").innerHTML = viewEventsPage;
+  document.getElementById("artSpace2").addEventListener("click", () => {
+    window.location.hash = "#/muro";
+  });
+  document.getElementById("profile").addEventListener("click", () => {
+    window.location.hash = "#/perfil";
+  });
 };
