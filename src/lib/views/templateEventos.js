@@ -1,5 +1,4 @@
 export const routeEvents = () => {
-
   const viewEventsPage = ` 
     <div class= "events-container">
     <header class = "header-wall">
@@ -7,7 +6,6 @@ export const routeEvents = () => {
     <img class="header-image" src="img/img-cel.png" alt="">
     <img class="header-image-desktop2" src="img/geri1.jpg" alt="">
     <div class="container-second-page">
-
         <div class="container_left">
             <h1 class="logo-second-page" id="artSpace">Art Space</h1>
         </div>
@@ -19,7 +17,6 @@ export const routeEvents = () => {
         </div>
     </div>
 </header>
-
     <div class= 'article'>
     <section class= 'containerEvent'>
     
@@ -43,7 +40,6 @@ export const routeEvents = () => {
    <a href="https://www.creativaatelier.com/cuello-de-lana-gris/" target="_blank">
    <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
 </section>
-
 <section class= 'containerEvent'>
     
     <img src="./img/paint.jpg" class="img-events" alt="pomaire"></a> 
@@ -57,7 +53,6 @@ export const routeEvents = () => {
    <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
  
 </section>
-
 <section class= 'containerEvent'>
     
     <img src="./img/esc1.jpg" class="img-events" alt="pomaire"></a> 
@@ -69,7 +64,6 @@ export const routeEvents = () => {
   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
-
 <section class= 'containerEvent'>
     
     <img src="./img/anime.jpg" class="img-events" alt="pomaire"></a> 
@@ -81,7 +75,6 @@ export const routeEvents = () => {
   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
-
 <section class= 'containerEvent'>
     
     <img src="./img/manu.jpg" class="img-events" alt="pomaire"></a> 
@@ -93,9 +86,7 @@ export const routeEvents = () => {
   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
-
 <section class= 'containerEvent'>
-
     <img src="./img/start.jpg" class="img-events" alt="pomaire"></a> 
     
     <h1 class='titulos'>Especial origami personajes Star Wars! - Time Corona</h1>
@@ -107,9 +98,7 @@ export const routeEvents = () => {
   
 </section>
 <section class= 'containerEvent'>
-
 <img src="./img/fami.jpg" class="img-events" alt="pomaire"></a>
-
 <h1 class='titulos'> Materiales que necesitas para crear Manualidades</h1>
     <h4 class='subtitulos'>Manualidades</h4>
     
@@ -117,12 +106,8 @@ export const routeEvents = () => {
   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
-
-
 <section class= 'containerEvent'>
-
 <img src="./img/inst.jpg" class="img-events" alt="pomaire"></a>
-
 <h1 class='titulos'>5 instrumentos musicales para aprender a tocar rápidamente</h1>
     <h4 class='subtitulos'>Musica</h4>
     
@@ -130,11 +115,8 @@ export const routeEvents = () => {
   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
-
 <section class= 'containerEvent'>
-
 <img src="./img/tallar.jpg" class="img-events" alt="pomaire"></a>
-
 <h1 class='titulos'>Maderas Para Tallar ¿Cuáles son las Mejores Opciones?</h1>
     <h4 class='subtitulos'>Manualidades</h4>
     
@@ -142,9 +124,6 @@ export const routeEvents = () => {
   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
-
-
-
 </div>
 <footer>
 <h5>Contacto: artspacechile@gmail.com</h5>

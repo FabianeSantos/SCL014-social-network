@@ -63,7 +63,6 @@ export const routeLogin = () => {
             <p id="errorMensaje" class="errorMensaje">¿Olvidó su contraseña?</p>
             <button class="btnComenzar" id="home_btn" type="button"> Comenzar</button>
         </form>
-
         <section class='loginSecons'>
             <p class="cont_logo">Ingresa con </p>
             <div class="cont_logo">
@@ -78,7 +77,6 @@ export const routeLogin = () => {
     </footer>
 </div>
 </div>
-
  `;
   window.location.hash = "#/inicio-sesion";
   document.getElementById("root").innerHTML = viewLogin;

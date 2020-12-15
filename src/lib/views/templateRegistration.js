@@ -79,7 +79,6 @@ export const routeRegistry = () => {
         </div>
     <form>
     </div>
-
     <div>
         <button class="btnx" id="save-registration-btn">Registrar</button> <br>
         <button class="btnx" id="loginBtn">Inicio</button>
