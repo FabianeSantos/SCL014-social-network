@@ -101,7 +101,7 @@ button {
   border-radius: 17px;
   border: 2px #f7e22d;
   font-family: "Open Sans", sans-serif;
-  font-size: 3vh;
+  font-size: 2vh;
   height: 6vh;
   width: 10rem;
   outline: none;
@@ -690,7 +690,7 @@ h5 {
 
   .btn {
     width: 37vw;
-    font-size: 3vh;
+    font-size: 2vh;
     height: 6vh;
     margin: 0em;
     margin-top: 2em;
