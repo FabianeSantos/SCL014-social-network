@@ -1,25 +1,22 @@
 export const routeEvents = () => {
-    const viewEventsPage = ` 
-    <div>
-    <header>
-        <img class="header-image" src="img/img-cel.png" alt="">
-        <img class="header-image-desktop2" src="img/geri1.jpg" alt="">
-        <div class = "container-second-page">
-          <div class = "container_left">
-            <h1 class = "logo-second-page" id="artSpace2" >Art Space</h1>
-            <input type="search" id="input_search" placeholder="Buscar en Art Space">
-            <div class = "lupa">
-            <img class = "icoLupa" id= "icoLupa"  src="img/buscar_icono.png" alt="">
-          </div>
-          </div>
-          <div class = "icons-General">
-            <img class = "icoArt" src="img/articulo_icono.png" alt="">
-            <a href="https://calendar.google.com/calendar/b/4/r?tab=mc" target="_blank"><img
-            src="img/calendario_icono.png" class = "icoCalen"></a>
-            <img class = "icoUsu" src="img/usuario_icono.png" alt="" id="profile">
-          </div> 
-       
-    </header>
+  const viewEventsPage = ` 
+    <div class= "events-container">
+    <header class = "header-wall">
+    <script src="js/imagenes.js"></script>
+    <img class="header-image" src="img/img-cel.png" alt="">
+    <img class="header-image-desktop2" src="img/geri1.jpg" alt="">
+    <div class="container-second-page">
+        <div class="container_left">
+            <h1 class="logo-second-page" id="artSpace">Art Space</h1>
+        </div>
+        <div class="icons-General">
+            <img class="icoArt" id="icoArt" src="img/articulo_icono.png" alt="">
+            <a href="https://calendar.google.com/calendar/b/4/r?tab=mc" target="_blank">
+                <img src="img/calendario_icono.png" class="icoCalen"></a>
+            <img class="icoUsu" src="img/usuario_icono.png" alt="" id='profile'>
+        </div>
+    </div>
+</header>
     <div class= 'article'>
     <section class= 'containerEvent'>
     
@@ -43,7 +40,6 @@ export const routeEvents = () => {
    <a href="https://www.creativaatelier.com/cuello-de-lana-gris/" target="_blank">
    <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
 </section>
-
 <section class= 'containerEvent'>
     
     <img src="./img/paint.jpg" class="img-events" alt="pomaire"></a> 
@@ -57,7 +53,6 @@ export const routeEvents = () => {
    <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
  
 </section>
-
 <section class= 'containerEvent'>
     
     <img src="./img/esc1.jpg" class="img-events" alt="pomaire"></a> 
@@ -69,7 +64,6 @@ export const routeEvents = () => {
   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
-
 <section class= 'containerEvent'>
     
     <img src="./img/anime.jpg" class="img-events" alt="pomaire"></a> 
@@ -81,7 +75,6 @@ export const routeEvents = () => {
   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
-
 <section class= 'containerEvent'>
     
     <img src="./img/manu.jpg" class="img-events" alt="pomaire"></a> 
@@ -93,24 +86,19 @@ export const routeEvents = () => {
   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
-
 <section class= 'containerEvent'>
-    
     <img src="./img/start.jpg" class="img-events" alt="pomaire"></a> 
     
     <h1 class='titulos'>Especial origami personajes Star Wars! - Time Corona</h1>
     <h4 class='subtitulos'> Manualidades</h4>
+ 
     
     <a href="https://timecorona.com/manualidades-diy/especial-origami-personajes-star-wars/" target="_blank">
   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
-
-
 </section>
 <section class= 'containerEvent'>
-
 <img src="./img/fami.jpg" class="img-events" alt="pomaire"></a>
-
 <h1 class='titulos'> Materiales que necesitas para crear Manualidades</h1>
     <h4 class='subtitulos'>Manualidades</h4>
     
@@ -118,12 +106,8 @@ export const routeEvents = () => {
   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
-
-
 <section class= 'containerEvent'>
-
 <img src="./img/inst.jpg" class="img-events" alt="pomaire"></a>
-
 <h1 class='titulos'>5 instrumentos musicales para aprender a tocar rápidamente</h1>
     <h4 class='subtitulos'>Musica</h4>
     
@@ -131,11 +115,8 @@ export const routeEvents = () => {
   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
-
 <section class= 'containerEvent'>
-
 <img src="./img/tallar.jpg" class="img-events" alt="pomaire"></a>
-
 <h1 class='titulos'>Maderas Para Tallar ¿Cuáles son las Mejores Opciones?</h1>
     <h4 class='subtitulos'>Manualidades</h4>
     
@@ -143,23 +124,18 @@ export const routeEvents = () => {
   <button class="btnArt" id="registration-btn">Ver Articulo</button></a> 
   
 </section>
-
-
-
 </div>
 <footer>
 <h5>Contacto: artspacechile@gmail.com</h5>
      &copy;2020 by Fabiane, Geraldine & Lady
     </footer>
 `;
-    window.location.hash = '#/conozca';
-    document.getElementById('root').innerHTML = viewEventsPage;
-    document.getElementById('artSpace2').addEventListener('click', () => {
-        window.location.hash = '#/muro';
-    })
-    document.getElementById('profile').addEventListener('click', () => {
-        window.location.hash = '#/perfil';
-    });
-       
-   
+  window.location.hash = "#/conozca";
+  document.getElementById("root").innerHTML = viewEventsPage;
+  document.getElementById("artSpace2").addEventListener("click", () => {
+    window.location.hash = "#/muro";
+  });
+  document.getElementById("profile").addEventListener("click", () => {
+    window.location.hash = "#/perfil";
+  });
 };
